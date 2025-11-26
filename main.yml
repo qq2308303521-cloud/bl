@@ -45,6 +45,9 @@ jobs:
         run: |
           chmod +x merge_build.sh
           ./merge_build.sh "${{ github.event.inputs.server_name }}" "${{ github.event.inputs.download_url }}"
+          # 设置环境变量用于后续步骤
+          echo "JMBQ_VERSION=1.0.0" >> $GITHUB_ENV
+          echo "VERSION=1.0.0" >> $GITHUB_ENV
 
       # 步骤6：创建 Release 并上传所有分卷文件
       - name: Release and Upload Assets
@@ -67,4 +70,5 @@ jobs:
                 1. Find the version prefix you need in the list below, and download all files ending with 7z.00* that have that server name prefix</br>
                 2. When extracting, simply select the "XXX.7z.001" file to decompress</br>
                 3. Find the APK file in the extracted folder and install it
+            </details>
             </details>
