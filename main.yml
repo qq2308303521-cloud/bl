@@ -2,12 +2,12 @@ name: APK AzurLane JMBQ Build Work
 on:
   workflow_dispatch:
     inputs:
-      server_name:
+      server_name:Bilibili
         description: '区服名称-必须（必须是英文字母！例如 Bilibili，台服和外服请使用XAPK AzurLane JMBQ Build Work）'
         required: true
         type: string
         default: ''
-      download_url:
+      download_url:https://pkg.biligame.com/games/blhx_9.6.12_1017_2_20251107_030822_40c3c.apk
         description: 'APK下载链接（只能填入直链，最好使用国外云盘的直链，例如Google云盘）'
         required: true
         type: string
